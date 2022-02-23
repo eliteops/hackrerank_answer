@@ -1,0 +1,12 @@
+if __name__ == '__main__':
+    records = []  
+    mark = []                          # storing score for sort
+    for _ in range(int(input())):
+        name = input()
+        score = float(input())
+        records.append([name, score])
+        mark.append(score)
+    second_least = sorted(set(mark))[1]    # here it is second_least score 
+    for name, score in sorted(records):
+        if score == second_least:          # if score in records == second_least 
+            print(name)                      #                                 then    print(name)
